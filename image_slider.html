@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Image Slider</title>
+	<style type="text/css">
+	</style>
+</head>
+<body>
+	<center><img id="img" width="300px" height="400px"></center><br>
+</body>
+<script type="text/javascript">
+	var imgArr=['junc1.png','junc2.png','junc3.png'];
+	var img=document.getElementById('img');
+	var date=new Date();
+	img.src="junc1.png";
+	var counter=0;
+	function slide(){
+		if (counter>2) {counter=0};
+		img.src=imgArr[counter++];
+	}
+	setInterval(slide,3000);
+	
+</script>
+</html>
